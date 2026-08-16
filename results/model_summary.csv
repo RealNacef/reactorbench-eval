@@ -1,0 +1,4 @@
+﻿model,n,technical_correctness,evidence_grounding,completeness,uncertainty_calibration,systems_reasoning,clarity,overall_mean,Accept as written,Accept with minor edits,Major revision required,Reject,accept_or_minor_rate,major_or_reject_rate,critical_failure_count
+ChatGPT Web — GPT-5.6 Luna (displayed/default),20,5,5,4.95,5,4.95,4.95,4.975,19,1,0,0,100.0,0.0,0
+Claude Web — Claude Sonnet 5 Moyen (displayed),20,4.25,3.85,4.9,4.45,4.85,4,4.383,1,18,1,0,95.0,5.0,0
+Gemini Web — 3.5 Flash-Lite (displayed),20,4.6,4.25,4.55,4.55,4.55,4.2,4.45,4,16,0,0,100.0,0.0,0

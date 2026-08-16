@@ -1,0 +1,16 @@
+﻿model,domain,n,overall_mean,technical_correctness
+ChatGPT Web — GPT-5.6 Luna (displayed/default),NOG,3,5,5
+ChatGPT Web — GPT-5.6 Luna (displayed/default),GIF Gen-IV,5,4.967,5
+ChatGPT Web — GPT-5.6 Luna (displayed/default),EPR/PWR,5,5,5
+ChatGPT Web — GPT-5.6 Luna (displayed/default),Systems/Replication/DT,3,4.944,5
+ChatGPT Web — GPT-5.6 Luna (displayed/default),SMR/AMR/MMR,4,4.958,5
+Claude Web — Claude Sonnet 5 Moyen (displayed),NOG,3,4.5,4.333
+Claude Web — Claude Sonnet 5 Moyen (displayed),GIF Gen-IV,5,4.433,4.2
+Claude Web — Claude Sonnet 5 Moyen (displayed),EPR/PWR,5,4.2,4
+Claude Web — Claude Sonnet 5 Moyen (displayed),Systems/Replication/DT,3,4.556,4.333
+Claude Web — Claude Sonnet 5 Moyen (displayed),SMR/AMR/MMR,4,4.333,4.5
+Gemini Web — 3.5 Flash-Lite (displayed),SMR/AMR/MMR,4,4.375,4.75
+Gemini Web — 3.5 Flash-Lite (displayed),EPR/PWR,5,4.3,4.6
+Gemini Web — 3.5 Flash-Lite (displayed),Systems/Replication/DT,3,4.278,4.333
+Gemini Web — 3.5 Flash-Lite (displayed),GIF Gen-IV,5,4.533,4.4
+Gemini Web — 3.5 Flash-Lite (displayed),NOG,3,4.833,5

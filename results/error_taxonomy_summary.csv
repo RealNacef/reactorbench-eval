@@ -1,0 +1,12 @@
+﻿model,error,count
+ChatGPT Web — GPT-5.6 Luna (displayed/default),Interface or system-boundary omission,1
+Claude Web — Claude Sonnet 5 Moyen (displayed),Source or authority weakness,10
+Claude Web — Claude Sonnet 5 Moyen (displayed),Unsupported generalization,8
+Claude Web — Claude Sonnet 5 Moyen (displayed),Factual or scientific error,2
+Claude Web — Claude Sonnet 5 Moyen (displayed),Economic or deployment overclaim,1
+Claude Web — Claude Sonnet 5 Moyen (displayed),Interface or system-boundary omission,1
+Gemini Web — 3.5 Flash-Lite (displayed),Unsupported generalization,9
+Gemini Web — 3.5 Flash-Lite (displayed),Source or authority weakness,3
+Gemini Web — 3.5 Flash-Lite (displayed),Interface or system-boundary omission,2
+Gemini Web — 3.5 Flash-Lite (displayed),Economic or deployment overclaim,1
+Gemini Web — 3.5 Flash-Lite (displayed),Factual or scientific error,1

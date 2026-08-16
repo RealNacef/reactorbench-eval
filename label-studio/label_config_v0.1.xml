@@ -1,0 +1,73 @@
+<View>
+  <Style>
+    .rb-box {border:1px solid #D7DEE7;border-radius:8px;padding:14px;margin:10px 0 16px 0;background:#FAFBFC;}
+    .rb-prompt {border-left:5px solid #315EFB;}
+    .rb-ref {border-left:5px solid #7A5AF8;}
+    .rb-response {border-left:5px solid #E76F51;background:#FFF9F6;}
+    .rb-section {margin-top:20px;padding-top:8px;border-top:1px solid #E5E9EF;}
+    .rb-grid {display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  </Style>
+  <Header value="ReactorBench-Eval — Expert LLM Evaluation for SMR, Gen-IV &amp; EPR Engineering"/>
+  <View className="rb-box">
+    <Header value="Task metadata"/>
+    <Text name="task_id" value="$task_id"/><Text name="domain" value="$domain"/>
+    <Text name="task_type" value="$task_type"/><Text name="difficulty" value="$difficulty"/>
+    <Text name="source_reference" value="$source_reference"/>
+  </View>
+  <Header value="Prompt"/><View className="rb-box rb-prompt"><Text name="prompt" value="$prompt"/></View>
+  <Header value="Authoritative reference context"/><View className="rb-box rb-ref"><Text name="reference_context" value="$reference_context"/></View>
+  <Header value="Candidate AI response"/><View className="rb-box rb-response"><Text name="candidate_response" value="$candidate_response"/></View>
+  <View className="rb-section"><Header value="1. Overall disposition"/>
+    <Choices name="verdict" toName="candidate_response" choice="single-radio" required="true">
+      <Choice value="Accept as written"/><Choice value="Accept with minor edits"/><Choice value="Major revision required"/><Choice value="Reject"/>
+    </Choices>
+  </View>
+  <View className="rb-section"><Header value="2. Error severity"/>
+    <Choices name="severity" toName="candidate_response" choice="single-radio" required="true">
+      <Choice value="Low"/><Choice value="Moderate"/><Choice value="High"/><Choice value="Critical"/>
+    </Choices>
+  </View>
+  <View className="rb-section"><Header value="3. Dimension scores — 1 poor, 5 excellent"/>
+    <View className="rb-grid">
+      <View><Header value="Technical correctness"/><Rating name="technical_correctness" toName="candidate_response" maxRating="5" required="true"/></View>
+      <View><Header value="Evidence grounding"/><Rating name="evidence_grounding" toName="candidate_response" maxRating="5" required="true"/></View>
+      <View><Header value="Completeness"/><Rating name="completeness" toName="candidate_response" maxRating="5" required="true"/></View>
+      <View><Header value="Assumptions &amp; uncertainty"/><Rating name="uncertainty_calibration" toName="candidate_response" maxRating="5" required="true"/></View>
+      <View><Header value="Systems/interface reasoning"/><Rating name="systems_reasoning" toName="candidate_response" maxRating="5" required="true"/></View>
+      <View><Header value="Clarity &amp; usefulness"/><Rating name="clarity" toName="candidate_response" maxRating="5" required="true"/></View>
+    </View>
+  </View>
+  <View className="rb-section"><Header value="4. Nuclear-engineering error taxonomy"/>
+    <Choices name="error_taxonomy" toName="candidate_response" choice="multiple" required="true">
+      <Choice value="No material error"/><Choice value="Factual or scientific error"/><Choice value="Unsupported generalization"/>
+      <Choice value="Source or authority weakness"/><Choice value="Technology-family confusion"/><Choice value="Safety-function omission"/>
+      <Choice value="Interface or system-boundary omission"/><Choice value="Incorrect operating-state assumption"/>
+      <Choice value="Missing initial or boundary condition"/><Choice value="Uncertainty or sensitivity omitted"/>
+      <Choice value="Requirements-traceability failure"/><Choice value="Procedure or operator-action defect"/>
+      <Choice value="FOAK-NOAK or maturity overclaim"/><Choice value="Economic or deployment overclaim"/>
+      <Choice value="Incorrect escalation or review path"/><Choice value="Unclear or poorly structured"/><Choice value="Other"/>
+    </Choices>
+  </View>
+  <View className="rb-section"><Header value="5. Critical failure"/>
+    <Choices name="critical_failure" toName="candidate_response" choice="single-radio" required="true">
+      <Choice value="None"/><Choice value="False safety assurance"/><Choice value="Invented authoritative requirement"/>
+      <Choice value="Fundamental reactor-physics error"/><Choice value="Unsafe operating-procedure recommendation"/>
+      <Choice value="Major technology-family misclassification"/><Choice value="Other critical failure"/>
+    </Choices>
+  </View>
+  <View className="rb-section"><Header value="6. Review or escalation needed"/>
+    <Choices name="review_path" toName="candidate_response" choice="single-radio" required="true">
+      <Choice value="No additional review"/><Choice value="Domain SME review"/><Choice value="Systems or interface review"/>
+      <Choice value="Independent safety review"/><Choice value="Operations or procedure validation"/><Choice value="Source verification required"/>
+    </Choices>
+  </View>
+  <View className="rb-section"><Header value="7. Expert rationale"/>
+    <TextArea name="written_rationale" toName="candidate_response" rows="7" maxSubmissions="1" editable="true" required="true"/>
+  </View>
+  <View className="rb-section"><Header value="8. Improved expert answer"/>
+    <TextArea name="improved_answer" toName="candidate_response" rows="8" maxSubmissions="1" editable="true" required="true"/>
+  </View>
+  <View className="rb-section"><Header value="9. Reviewer confidence"/>
+    <Rating name="reviewer_confidence" toName="candidate_response" maxRating="5" required="true"/>
+  </View>
+</View>

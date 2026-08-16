@@ -1,0 +1,182 @@
+[
+  {
+    "task_id": "RB-NOG-004",
+    "domain": "NOG / Operating Procedures",
+    "task_type": "Configuration control",
+    "difficulty": "Hard",
+    "source_reference": "IAEA SSG-70; SSG-71; configuration-management principles",
+    "prompt": "A system design modification has been approved. Can the existing normal operating guideline remain unchanged until the next periodic revision?",
+    "reference_context": "Procedure impact should be assessed as part of modification/configuration control. If the modification affects operating actions, indications, limits, interfaces or expected response, affected procedures should be updated and validated before relying on the modified configuration."
+  },
+  {
+    "task_id": "RB-GIF-MSR-001",
+    "domain": "GIF Gen-IV — MSR",
+    "task_type": "Technology-family distinction",
+    "difficulty": "Medium",
+    "source_reference": "Generation IV International Forum — MSR public materials",
+    "prompt": "Why is it misleading to describe every molten salt reactor as a reactor with fuel dissolved in the coolant?",
+    "reference_context": "MSR is a broad family. Some concepts use fuel dissolved in a circulating fuel salt, while others use solid fuel with molten salt as coolant. Safety functions, source terms, fuel handling and chemistry therefore differ substantially across concepts."
+  },
+  {
+    "task_id": "RB-SMR-003",
+    "domain": "SMR / AMR / MMR",
+    "task_type": "Multi-module systems reasoning",
+    "difficulty": "Hard",
+    "source_reference": "IAEA SMR publications and general nuclear safety principles",
+    "prompt": "What should an evaluator check when an AI claims that adding more modules to an SMR site only increases electrical output and does not change the safety assessment?",
+    "reference_context": "A multi-module site can introduce shared systems, common-cause dependencies, interactions between modules, concurrent maintenance or events, staffing and control-room challenges, shared ultimate heat sinks and site-level emergency considerations. The impact is design-specific and must be assessed rather than assumed negligible."
+  },
+  {
+    "task_id": "RB-NOG-002",
+    "domain": "NOG / Operating Procedures",
+    "task_type": "Review vs validation",
+    "difficulty": "Medium",
+    "source_reference": "IAEA SSR-2/2; SSG-70; SSG-76",
+    "prompt": "Why is simulator validation useful after technical review of an operating guideline?",
+    "reference_context": "Technical review checks correctness and consistency; simulator validation can reveal execution, timing, human-factors, indication, interface and plant-response issues that are difficult to identify from a document alone."
+  },
+  {
+    "task_id": "RB-EPR-001",
+    "domain": "EPR / PWR Systems & Safety",
+    "task_type": "Defence-in-depth reasoning",
+    "difficulty": "Medium",
+    "source_reference": "IAEA SSR-2/1 (Rev. 1); public EPR safety information",
+    "prompt": "A response says redundancy alone is sufficient to demonstrate defence in depth in an EPR-class plant. Evaluate.",
+    "reference_context": "Redundancy is important but not sufficient. Defence in depth also considers independence, diversity where appropriate, physical separation, common-cause failures, multiple barriers, prevention and mitigation levels, and the reliability of supporting systems."
+  },
+  {
+    "task_id": "RB-GIF-SCWR-002",
+    "domain": "GIF Gen-IV — SCWR",
+    "task_type": "Thermal-hydraulics reasoning",
+    "difficulty": "Hard",
+    "source_reference": "GIF SCWR public materials",
+    "prompt": "Why can heat-transfer analysis near the pseudo-critical region be important in an SCWR?",
+    "reference_context": "Thermophysical properties of supercritical water can vary strongly near the pseudo-critical region, affecting density, heat capacity, heat transfer, flow stability and cladding temperature. Appropriate correlations, validation and operating conditions matter."
+  },
+  {
+    "task_id": "RB-NOG-005",
+    "domain": "NOG / Operating Procedures",
+    "task_type": "Abnormal indication handling",
+    "difficulty": "Hard",
+    "source_reference": "IAEA SSG-70 and conduct-of-operations principles",
+    "prompt": "During a normal operating evolution, two indications disagree. Should the operator continue if the more reliable-looking instrument supports the expected trend?",
+    "reference_context": "The response depends on the approved procedure and plant state. Conflicting indications should be recognized, instrument validity assessed using approved checks, and progression stopped or escalated when required. An operator should not simply choose the indication that matches expectation."
+  },
+  {
+    "task_id": "RB-REP-001",
+    "domain": "Replication / FOAK-to-NOAK",
+    "task_type": "Variability analysis",
+    "difficulty": "Hard",
+    "source_reference": "Project replication and systems-engineering methodology",
+    "prompt": "Why is 'copy the FOAK design unchanged' not a sufficient NOAK replication strategy?",
+    "reference_context": "Replication requires identifying which assumptions and interfaces are stable and which vary with site, regulation, client requirements, logistics, supply chain and constructability. Deviations need explicit qualification and governance. Standardization aims to minimize redesign, not ignore legitimate variability."
+  },
+  {
+    "task_id": "RB-SMR-008",
+    "domain": "SMR / AMR / MMR",
+    "task_type": "Fuel and supply-chain reasoning",
+    "difficulty": "Medium",
+    "source_reference": "IAEA ARIS; public fuel-cycle information",
+    "prompt": "How should an AI evaluate the claim that an advanced reactor has no fuel-supply risk because its required fuel can be technically manufactured?",
+    "reference_context": "Technical manufacturability is not the same as commercial availability. Evaluation should consider enrichment level and capacity, qualified fabrication facilities, licensing, transport, supplier concentration, lead times, demand competition and demonstrated production scale. The answer should distinguish technical feasibility from supply-chain readiness."
+  },
+  {
+    "task_id": "RB-EPR-008",
+    "domain": "EPR / PWR Systems & Safety",
+    "task_type": "Radiation protection interface",
+    "difficulty": "Medium",
+    "source_reference": "IAEA GSR Part 3; PWR systems engineering",
+    "prompt": "Why should radiation-protection assumptions be reviewed when changing the operating conditions of a reactor auxiliary system?",
+    "reference_context": "Operating conditions can affect source terms, activity transport, residence time, leakage, shielding needs, maintenance exposure and monitoring assumptions. Radiation-protection conclusions should remain consistent with the actual system state and interfaces."
+  },
+  {
+    "task_id": "RB-SMR-004",
+    "domain": "SMR / AMR / MMR",
+    "task_type": "Deployment readiness",
+    "difficulty": "Hard",
+    "source_reference": "IAEA ARIS; regulator and vendor public sources",
+    "prompt": "A model ranks an SMR as 'deployment-ready' because the vendor has announced a commercial operation date. How should that claim be evaluated?",
+    "reference_context": "Vendor schedules are evidence of intent, not sufficient proof of deployment readiness. Evaluation should distinguish design maturity, licensing status, construction status, supply-chain readiness, fuel availability, demonstrated technology, financing and site-specific approvals. Source authority and date matter."
+  },
+  {
+    "task_id": "RB-EPR-005",
+    "domain": "EPR / PWR Systems & Safety",
+    "task_type": "P&ID / interface review",
+    "difficulty": "Medium",
+    "source_reference": "Systems-engineering and nuclear design-review practice",
+    "prompt": "What should an expert check when an AI proposes a P&ID modification to a nuclear auxiliary system?",
+    "reference_context": "Check the intended function, system boundaries, flow paths, isolation, normal and abnormal states, interfaces, instrumentation/control, electrical/support dependencies, maintainability, requirements, safety classification and downstream document impacts. A P&ID edit cannot be assessed in isolation."
+  },
+  {
+    "task_id": "RB-SYS-002",
+    "domain": "Systems Engineering & Requirements",
+    "task_type": "Interface management",
+    "difficulty": "Hard",
+    "source_reference": "Systems-engineering and configuration-management practice",
+    "prompt": "A change improves one subsystem but modifies a shared interface. What should happen before approval?",
+    "reference_context": "The affected interface requirements, upstream/downstream systems, safety functions, operating procedures, I&C, physical integration, configuration items and verification evidence should be reviewed. Approval should consider system-level consequences, not only local performance."
+  },
+  {
+    "task_id": "RB-DT-001",
+    "domain": "HTGR / Digital Twin",
+    "task_type": "Model fidelity and validation",
+    "difficulty": "Medium",
+    "source_reference": "Digital-twin systems-engineering principles",
+    "prompt": "A digital twin reproduces expected nominal trends. Is that enough to call it validated for engineering decision support?",
+    "reference_context": "No. Validation should be tied to intended use and cover relevant states, data provenance, model assumptions, uncertainty, interfaces, calibration/verification evidence and known limitations. Nominal trend matching alone does not establish decision-grade fidelity."
+  },
+  {
+    "task_id": "RB-SMR-005",
+    "domain": "SMR / AMR / MMR",
+    "task_type": "Economics and FOAK/NOAK",
+    "difficulty": "Hard",
+    "source_reference": "IAEA SMR publications; general project-economics principles",
+    "prompt": "Why is it risky to use a vendor's NOAK cost target as the expected cost of the first commercial unit?",
+    "reference_context": "NOAK assumptions generally depend on learning, standardized design, repeat orders, mature supply chains, stable construction performance and financing conditions. FOAK projects may face first-of-kind engineering, licensing, supply-chain and execution premiums. The model should separate disclosed estimate type, basis, currency/year and uncertainty."
+  },
+  {
+    "task_id": "RB-GIF-VHTR-002",
+    "domain": "GIF Gen-IV — VHTR / HTGR",
+    "task_type": "RCCS / systems reasoning",
+    "difficulty": "Hard",
+    "source_reference": "GIF VHTR public materials; general HTGR safety concepts",
+    "prompt": "What should an evaluator look for when a model describes the Reactor Cavity Cooling System as 'only a normal-operation HVAC function'?",
+    "reference_context": "In HTGR concepts using an RCCS, the system can support removal of heat from the reactor vessel/cavity, including safety-relevant decay-heat scenarios depending on the design. Evaluation should identify the credited safety function, heat-transfer path, passive/active features, interfaces and applicable design basis."
+  },
+  {
+    "task_id": "RB-EPR-003",
+    "domain": "EPR / PWR Systems & Safety",
+    "task_type": "LOCA analysis",
+    "difficulty": "Hard",
+    "source_reference": "IAEA GSR Part 4; public PWR accident-analysis principles",
+    "prompt": "Before accepting an AI summary of a LOCA analysis, what technical elements should be traceable?",
+    "reference_context": "The summary should preserve the initiating event and break assumptions, initial and boundary conditions, system availability assumptions, physical models, key safety criteria, uncertainties, relevant operator actions if credited, and the link between calculated results and the safety conclusion."
+  },
+  {
+    "task_id": "RB-GIF-GFR-002",
+    "domain": "GIF Gen-IV — GFR",
+    "task_type": "Technology-family distinction",
+    "difficulty": "Hard",
+    "source_reference": "GIF GFR and VHTR public materials",
+    "prompt": "A model treats GFR and VHTR as the same reactor family because both use helium. What is missing?",
+    "reference_context": "Coolant alone does not define the reactor concept. GFR is a fast-spectrum gas-cooled system with fuel/core choices supporting fast neutronics, while VHTR is generally a thermal-spectrum graphite-moderated high-temperature system. Their safety, materials, fuel and decay-heat-removal considerations differ."
+  },
+  {
+    "task_id": "RB-EPR-004",
+    "domain": "EPR / PWR Systems & Safety",
+    "task_type": "Dilution and recriticality",
+    "difficulty": "Hard",
+    "source_reference": "Public PWR reactor-physics and safety-analysis principles",
+    "prompt": "Why can heterogeneous dilution be important when evaluating recriticality risk during some PWR transients?",
+    "reference_context": "Spatially non-uniform boron concentration can create local reactivity conditions that differ from a well-mixed assumption. Evaluation may need coupled thermal-hydraulic and neutronic reasoning, mixing behavior, timing, core state and conservative assumptions."
+  },
+  {
+    "task_id": "RB-GIF-SFR-002",
+    "domain": "GIF Gen-IV — SFR",
+    "task_type": "Safety reasoning",
+    "difficulty": "Hard",
+    "source_reference": "GIF SFR safety public materials",
+    "prompt": "A model says sodium-cooled fast reactors cannot have loss-of-coolant accidents because the primary circuit operates at low pressure. Evaluate.",
+    "reference_context": "Low pressure can reduce some high-pressure break phenomena, but it does not eliminate coolant leakage, loss of inventory, flow degradation, heat-removal challenges or sodium-related chemical hazards. Accident categories and consequences are design-specific."
+  }
+]

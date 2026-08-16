@@ -1,0 +1,28 @@
+{
+  "generation_date": "2026-08-15",
+  "study_type": "Cross-provider consumer-UI evaluation under standardized user-level prompt protocol",
+  "models": [
+    {
+      "interface": "ChatGPT Web",
+      "plan": "Free",
+      "displayed_model_mode": "default model (GPT-5.6 Luna)"
+    },
+    {
+      "interface": "Claude Web",
+      "plan": "Free",
+      "displayed_model_mode": "Claude Sonnet 5 Moyen"
+    },
+    {
+      "interface": "Gemini Web",
+      "plan": "Free",
+      "displayed_model_mode": "3.5 Flash-Lite"
+    }
+  ],
+  "limitations": [
+    "Consumer interfaces do not guarantee pinned backend model snapshots.",
+    "One first response per prompt and interface; no repeated-run variance estimate.",
+    "No web search, retrieval, file upload or external tools were used.",
+    "Reference contexts were evaluator-only and not supplied to the models.",
+    "Primary annotation set is assistant-drafted and requires project-owner expert sign-off before being described as human-verified."
+  ]
+}
