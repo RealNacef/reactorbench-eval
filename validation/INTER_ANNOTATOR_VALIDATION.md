@@ -5,60 +5,50 @@
 A second nuclear-systems expert independently annotated **12 blinded model responses**
 using ReactorBench-Eval Rubric v0.1.
 
-The primary annotation set used here for comparison is the project owner's AI-assisted
-first-pass set. These metrics therefore measure **reviewer calibration / validation**, not
-agreement between two fully independent unaided human annotations.
+The primary annotation set was an AI-assisted first pass signed off by the project owner.
+The independent labels are preserved unchanged.
 
-## Agreement snapshot
+## Pre-adjudication agreement
 
 - Verdict exact agreement: **41.7%**
 - Verdict Cohen's kappa: **0.034**
-- Verdict quadratic-weighted kappa: **-0.053**
 - Severity exact agreement: **58.3%**
-- Severity Cohen's kappa: **0.0**
-- Severity quadratic-weighted kappa: **0.0**
+- Severity Cohen's kappa: **0.000**
 
-The low kappa values should not be hidden. The 12-case sample is small and highly skewed
-toward acceptable responses, so chance-corrected kappa is unstable and exposes a real
-calibration difference: the second reviewer tends to use **Accept as written / Low**
-more often, while the primary rubric pass more often uses **Accept with minor edits**.
+The small, acceptance-skewed 12-case sample makes chance-corrected kappa unstable.
+More importantly, it revealed a calibration difference: the independent reviewer used
+`Accept as written / Low` more often, while the primary pass used
+`Accept with minor edits / Moderate` more often.
 
-## 1–5 rating agreement
+### Important methodological note
 
-| Dimension | Exact | Within ±1 | Mean absolute difference |
-|---|---:|---:|---:|
-| Technical Correctness | 50.0% | 91.7% | 0.58 |
-| Evidence Grounding | 58.3% | 83.3% | 0.58 |
-| Completeness | 75.0% | 100.0% | 0.25 |
-| Uncertainty Calibration | 75.0% | 100.0% | 0.25 |
-| Systems Reasoning | 75.0% | 100.0% | 0.25 |
-| Clarity | 33.3% | 100.0% | 0.67 |
+The agreement metrics above remain **pre-adjudication metrics**. They are not recomputed
+after consensus, because adjudication is intended to create final benchmark labels, not to
+artificially inflate inter-reviewer agreement.
 
-## Main adjudication case
+## Formal adjudication
 
-The largest categorical disagreement is **RB-EPR-004 / Model-B**:
+All **9 categorical disagreements** were reviewed and an adjudicated label was recorded
+separately in `ADJUDICATION_LOG_v0.1.csv`. Neither reviewer's original labels were overwritten.
 
-- Primary pass: **Major revision required / High**
-- Independent reviewer: **Accept as written / Low**
+The most important case was `RB-EPR-004 / Model-B` (heterogeneous boron dilution):
 
-This case should be manually adjudicated before publishing final benchmark metrics.
-The remaining disagreements are mostly one-step calibration differences between
-`Accept as written` and `Accept with minor edits`, or `Low` versus `Moderate`.
+- Primary: `Major revision required / High`
+- Independent reviewer: `Accept as written / Low`
+- **Adjudicated: `Accept with minor edits / Moderate`**
 
-## Recommended portfolio wording
+The core physics was accepted. The correction is limited to qualifying/removing several
+additional transient examples that were not supported by the controlled reference basis.
 
-Do not claim "high inter-annotator agreement" from this sample.
+## Final benchmark-label policy
 
-A defensible statement is:
+For the 12 independently reviewed cases, the adjudicated label is the final benchmark label.
+For the remaining 48 cases, the signed-off primary label remains the final label.
 
-> An independent nuclear-systems reviewer re-annotated a 12-response blinded subset.
-> Exact agreement was 41.7% on overall disposition and
-> 58.3% on severity; 1–5 rubric dimensions were generally
-> within one point, with remaining disagreements used for rubric adjudication.
+This preserves:
+1. primary annotation;
+2. independent annotation;
+3. adjudication;
+4. final benchmark label
 
-## Next action
-
-1. Adjudicate the largest disagreement.
-2. Review the remaining one-step verdict/severity disagreements.
-3. Store the adjudicated label separately rather than overwriting either reviewer's original label.
-4. Recompute final agreement metrics after documenting adjudication.
+as separate traceable layers.
